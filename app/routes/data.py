@@ -4,6 +4,7 @@ Routes that fetch AVCAN data (forecast for point, archive).
 
 from fastapi import APIRouter, HTTPException
 
+from app.models import forecast_to_summary, parse_forecast_product
 from app.services.avcan import (
     fetch_archive,
     fetch_areas,
